@@ -6,6 +6,7 @@ import { Container } from "./Styles/Common.Styles";
 import Hero from "./pages/Hero";
 // components
 import TopBar from "./components/TopBar";
+import Navbar from "./components/Navbar";
 
 // main
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <>
       <GlobalStyles />
       <TopBar />
+      <Navbar />
       <Container>
         <Hero />
         <div style={{ minHeight: "200vh" }}></div>

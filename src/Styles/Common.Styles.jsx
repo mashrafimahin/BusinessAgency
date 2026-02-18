@@ -7,6 +7,7 @@ export const Container = styled.main`
 export const Heading = styled.h1`
   font-family: brand, sans-serif;
   font-weight: 700;
+  letter-spacing: 2px;
   color: ${(props) =>
     props.black ? "var(--defaultColor)" : "var(--textColor)"};
   font-size: 3.3rem;
