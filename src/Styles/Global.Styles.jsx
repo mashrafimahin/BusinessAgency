@@ -9,6 +9,11 @@ const GlobalStyles = createGlobalStyle`
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-snap-type: mandatory;
+        }
+
         @font-face {
             font-family: brand;
             src: url(${brandFont});
@@ -19,15 +24,12 @@ const GlobalStyles = createGlobalStyle`
             --textColor: #fff;
             --defaultColor: #111;
             --btnBG: #F7F7F7;
-            --accentColor: #0075FF
+            --accentColor: #0075FF;
+            --paraColor: #a9b0b8;
         }
 
         body {
             background-color: var(--primaryColor);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
         }
 `;
 
