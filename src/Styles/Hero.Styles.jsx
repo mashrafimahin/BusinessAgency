@@ -5,6 +5,7 @@ export const Container = styled.section`
   align-items: center;
   justify-content: center;
   gap: 0rem;
+  margin-top: 10%;
 `;
 
 export const Child = styled.div`
