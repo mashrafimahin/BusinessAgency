@@ -33,7 +33,7 @@ function Hero() {
     <Container>
       {/* info */}
       <Child>
-        <Heading>
+        <Heading style={{ fontSize: "3.6rem" }}>
           Maximise growth qualified business <Highlight>consulting</Highlight>
         </Heading>
         <Paragraph>

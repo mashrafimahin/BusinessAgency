@@ -5,14 +5,15 @@ export const Container = styled.section`
   align-items: center;
   justify-content: center;
   gap: 0rem;
-  margin-top: 10%;
+  margin-top: 3%;
+  margin-left: 10%;
 `;
 
 export const Child = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 20px;
-  max-width: 50%;
+  min-width: 54%;
 `;
 
 export const ImageWrapper = styled.div`
@@ -69,8 +70,8 @@ export const ImageWrapper = styled.div`
 `;
 
 export const Image = styled.img`
-  height: 82%;
-  width: 82%;
+  height: 80%;
+  width: 80%;
   object-fit: cover;
 `;
 
