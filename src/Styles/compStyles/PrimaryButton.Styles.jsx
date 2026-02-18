@@ -10,7 +10,7 @@ export const Wrapper = styled.button`
   font-weight: 600;
   color: var(--defaultColor);
   background-color: var(--btnBG);
-  padding: 5.5px;
+  padding: ${(props) => (props.$resize ? "2.6px 3.8px" : "5.5px")};
   border-radius: 50px;
   position: relative;
   z-index: 1;

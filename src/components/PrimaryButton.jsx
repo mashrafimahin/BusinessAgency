@@ -5,9 +5,9 @@ import { Wrapper } from "../Styles/compStyles/PrimaryButton.Styles";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 // main
-function PrimaryButton({ children }) {
+function PrimaryButton({ children, ...rest }) {
   return (
-    <Wrapper>
+    <Wrapper {...rest}>
       <span className="btn_inner">
         <span className="btn_icon">
           <span>
