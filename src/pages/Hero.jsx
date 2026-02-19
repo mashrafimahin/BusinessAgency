@@ -4,11 +4,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   Container,
   Child,
+  ContentChild,
   ImageWrapper,
   Image,
   PlayfulText,
   PlayText,
   PlayButton,
+  OverlayPic,
+  Kidney,
+  Scale,
 } from "../Styles/Hero.Styles";
 import {
   Heading,
@@ -24,6 +28,9 @@ import Button from "../components/PrimaryButton";
 // images
 import hero from "../assets/images/hero-1.webp";
 import text from "../assets/images/play-text.png";
+import Kidne from "../assets/images/hero-1.png";
+import Overle from "../assets/images/hero-2.png";
+import Gemini from "../assets/images/hero-3.png";
 // icons
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
@@ -32,8 +39,8 @@ function Hero() {
   return (
     <Container>
       {/* info */}
-      <Child>
-        <Heading style={{ fontSize: "3.6rem" }}>
+      <ContentChild>
+        <Heading style={{ fontSize: "clamp(2.2rem, 4vw, 3.6rem)" }}>
           Maximise growth qualified business <Highlight>consulting</Highlight>
         </Heading>
         <Paragraph>
@@ -43,7 +50,7 @@ function Hero() {
         <FlexBox style={topDown}>
           <Button>Free Consultation</Button>
         </FlexBox>
-      </Child>
+      </ContentChild>
       {/* image */}
       <Child>
         <ImageWrapper>
@@ -56,6 +63,10 @@ function Hero() {
           </PlayfulText>
         </ImageWrapper>
       </Child>
+      {/* overlays */}
+      <OverlayPic src={Overle} />
+      <Kidney src={Kidne} />
+      <Scale src={Gemini} />
     </Container>
   );
 }
