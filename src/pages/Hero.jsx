@@ -42,7 +42,10 @@ function Hero() {
       <Container>
         {/* info */}
         <ContentChild>
-          <Heading style={{ fontSize: "clamp(2.2rem, 4vw, 3.6rem)" }}>
+          <Heading
+            style={{ fontSize: "clamp(2.2rem, 4vw, 3.6rem)" }}
+            special={true}
+          >
             Maximise growth qualified business <Highlight>consulting</Highlight>
           </Heading>
           <Paragraph>

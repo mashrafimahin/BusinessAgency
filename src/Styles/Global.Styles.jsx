@@ -22,10 +22,11 @@ const GlobalStyles = createGlobalStyle`
         :root {
             --primaryColor: #051229;;
             --textColor: #fff;
-            --defaultColor: #111;
+            --defaultColor: #252525;
             --btnBG: #F7F7F7;
             --accentColor: #0075FF;
-            --paraColor: #a9b0b8;
+            --paraColor: #878b91;
+            --extendPara: #364052;
         }
 
         body {
