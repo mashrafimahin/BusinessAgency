@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
-export const Container = styled.main`
-  padding: 0 8%;
+export const Wrapper = styled.section`
+  /* padding: 0 8%; */
+
+  /* @media screen and (min-width: 1480px) {
+    padding: 0 5%;
+  } */
 `;
 
 export const Heading = styled.h1`

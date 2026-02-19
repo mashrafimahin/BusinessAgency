@@ -30,6 +30,7 @@ const GlobalStyles = createGlobalStyle`
 
         body {
             background-color: var(--primaryColor);
+            overflow-x: hidden;
         }
 `;
 
