@@ -1,9 +1,9 @@
 // hooks
 // styles
 import GlobalStyles from "./Styles/Global.Styles";
-import { Container } from "./Styles/Common.Styles";
 // pages
 import Hero from "./pages/Hero";
+import Features from "./pages/Features";
 // components
 import TopBar from "./components/TopBar";
 import Navbar from "./components/Navbar";
@@ -15,10 +15,8 @@ function App() {
       <GlobalStyles />
       <TopBar />
       <Navbar />
-      <Container>
-        <Hero />
-        <div style={{ minHeight: "200vh" }}></div>
-      </Container>
+      <Hero />
+      <Features />
     </>
   );
 }
