@@ -13,8 +13,8 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <TopBar />
-      <Navbar />
+      {/* <TopBar /> */}
+      {/* <Navbar /> */}
       <Hero />
       <Features />
     </>
