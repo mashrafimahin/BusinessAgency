@@ -27,6 +27,8 @@ const GlobalStyles = createGlobalStyle`
             --accentColor: #0075FF;
             --paraColor: #878b91;
             --extendPara: #364052;
+            --iconColor: #7b8183;
+            --hoverColor: #E1E8F0;
         }
 
         body {

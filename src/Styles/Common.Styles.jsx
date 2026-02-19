@@ -14,7 +14,7 @@ export const Heading = styled.h1`
   letter-spacing: ${(props) => (props.special ? "2px" : "0")};
   color: ${(props) =>
     props.black ? "var(--defaultColor)" : "var(--textColor)"};
-  font-size: ${(props) => (props.special ? "3.3rem" : "2.5rem")};
+  font-size: ${(props) => (props.special ? "3.3rem" : "2.8rem")};
   font-weight: 800;
 
   &::selection {
@@ -32,6 +32,7 @@ export const SubHeading = styled.h2`
 `;
 
 export const Highlight = styled.span`
+  position: relative;
   font-family: brand, sans-serif;
   color: var(--accentColor);
   font-family: 1.8rem;
@@ -41,6 +42,30 @@ export const Highlight = styled.span`
   &::selection {
     background: #000;
     color: #fff;
+  }
+`;
+
+export const Tagline = styled(Highlight)`
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: -20px;
+    background: var(--accentColor);
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: -18px;
+    background: var(--accentColor);
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
   }
 `;
 
