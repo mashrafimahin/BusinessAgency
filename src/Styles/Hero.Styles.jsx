@@ -1,13 +1,22 @@
 import { styled, keyframes } from "styled-components";
 
-export const Container = styled.section`
+export const Container = styled.div`
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0rem;
   margin-top: 3%;
-  margin-left: 10%;
+  margin-left: 4%;
+
+  @media screen and (max-width: 990px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 1200px) {
+    margin-left: 0;
+    justify-content: flex-start;
+  }
 
   @media screen and (min-width: 1480px) {
     margin-left: 0%;
@@ -31,6 +40,7 @@ export const ImageWrapper = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
+  z-index: 0;
 
   &::before {
     content: "";
@@ -78,6 +88,10 @@ export const ImageWrapper = styled.div`
     );
   }
 
+  @media screen and (max-width: 1200px) {
+    scale: 0.9;
+  }
+
   @media screen and (min-width: 1480px) {
     scale: 1.35;
     margin-top: 20%;
@@ -86,6 +100,10 @@ export const ImageWrapper = styled.div`
 
 export const Image = styled.img`
   max-width: 420px;
+
+  @media screen and (max-width: 990px) {
+    max-width: max-content;
+  }
 `;
 
 export const PlayfulText = styled.div`
@@ -148,23 +166,23 @@ const ScaleAnim = keyframes`
 export const OverlayPic = styled.img`
   position: absolute;
   top: -2%;
-  right: -8%;
+  right: 2%;
   max-width: 100%;
-  z-index: -1;
+  z-index: -2;
   opacity: 0.4;
   animation: ${OverlayAnim} 4s linear infinite;
 
   @media screen and (min-width: 1480px) {
-    right: 0;
+    right: 4%;
   }
 `;
 
 export const Kidney = styled(OverlayPic)`
-  left: -24%;
+  left: -10%;
   animation: ${KidneyAnim} 4s linear infinite;
 
   @media screen and (min-width: 1480px) {
-    left: 0;
+    left: 4%;
   }
 `;
 

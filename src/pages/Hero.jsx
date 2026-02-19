@@ -15,6 +15,7 @@ import {
   Scale,
 } from "../Styles/Hero.Styles";
 import {
+  Wrapper,
   Heading,
   Highlight,
   Paragraph,
@@ -37,37 +38,39 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons";
 // main
 function Hero() {
   return (
-    <Container>
-      {/* info */}
-      <ContentChild>
-        <Heading style={{ fontSize: "clamp(2.2rem, 4vw, 3.6rem)" }}>
-          Maximise growth qualified business <Highlight>consulting</Highlight>
-        </Heading>
-        <Paragraph>
-          Transform your business with expert consultancy services our team of
-          seasoned consultants unparalleled.
-        </Paragraph>
-        <FlexBox style={topDown}>
-          <Button>Free Consultation</Button>
-        </FlexBox>
-      </ContentChild>
-      {/* image */}
-      <Child>
-        <ImageWrapper>
-          <Image src={hero} />
-          <PlayfulText>
-            <PlayText src={text} />
-            <PlayButton>
-              <FontAwesomeIcon icon={faPlay} />
-            </PlayButton>
-          </PlayfulText>
-        </ImageWrapper>
-      </Child>
-      {/* overlays */}
-      <OverlayPic src={Overle} />
-      <Kidney src={Kidne} />
-      <Scale src={Gemini} />
-    </Container>
+    <Wrapper>
+      <Container>
+        {/* info */}
+        <ContentChild>
+          <Heading style={{ fontSize: "clamp(2.2rem, 4vw, 3.6rem)" }}>
+            Maximise growth qualified business <Highlight>consulting</Highlight>
+          </Heading>
+          <Paragraph>
+            Transform your business with expert consultancy services our team of
+            seasoned consultants unparalleled.
+          </Paragraph>
+          <FlexBox style={topDown}>
+            <Button>Free Consultation</Button>
+          </FlexBox>
+        </ContentChild>
+        {/* image */}
+        <Child>
+          <ImageWrapper>
+            <Image src={hero} />
+            <PlayfulText>
+              <PlayText src={text} />
+              <PlayButton>
+                <FontAwesomeIcon icon={faPlay} />
+              </PlayButton>
+            </PlayfulText>
+          </ImageWrapper>
+        </Child>
+        {/* overlays */}
+        <OverlayPic src={Overle} />
+        <Kidney src={Kidne} />
+        <Scale src={Gemini} />
+      </Container>
+    </Wrapper>
   );
 }
 
