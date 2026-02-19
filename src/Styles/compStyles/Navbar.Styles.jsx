@@ -6,11 +6,19 @@ export const Container = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (min-width: 1700px) {
+    padding: 0.6% 3%;
+  }
 `;
 
 export const Logo = styled.img`
   max-width: 12%;
   cursor: pointer;
+
+  @media screen and (min-width: 1700px) {
+    max-width: 6%;
+  }
 `;
 
 export const List = styled.ul`
