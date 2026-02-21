@@ -1,8 +1,12 @@
 // hooks
+import { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// context
+import { ScreenContext } from "../context/ScreenSizeContext";
 // styles
 import {
   Container,
+  DraftDiv,
   Child,
   Shape,
   SubChild,
@@ -34,13 +38,18 @@ import User2 from "../assets/images/thumb-2.png";
 import User3 from "../assets/images/thumb-3.png";
 // main
 function Service() {
+  // context
+  const { size } = useContext(ScreenContext);
+
   return (
     <Container>
       <Shape src={Shape1} />
       <TopShape src={Shape2} />
       <Child>
         {/* info */}
-        <Tagline>Our Company</Tagline>
+        <DraftDiv>
+          <Tagline>Our Company</Tagline>
+        </DraftDiv>
         <Heading black={true}>
           Crafting success tailored solution for each & every challenges
         </Heading>
@@ -54,7 +63,13 @@ function Service() {
         {/* sub boxes */}
         <SubChild>
           {/* list */}
-          <Box style={{ borderRight: "1px solid #c6c8ca" }}>
+          <Box
+            style={
+              size < 581
+                ? { borderRight: "none" }
+                : { borderRight: "1px solid #c6c8ca" }
+            }
+          >
             <List>
               <li>Expertise and experience</li>
               <li>Client Centric approach</li>

@@ -42,8 +42,12 @@ export const Container = styled.section`
   }
   @media screen and (max-width: 580px) {
     justify-content: flex-start;
-    padding: 12% 4%;
+    padding: 20% 4%;
   }
+`;
+
+export const DraftDiv = styled.div`
+  padding-left: 22px;
 `;
 
 export const Child = styled.div`
@@ -115,6 +119,10 @@ export const Box = styled.div`
     padding: 0;
     padding-top: 5%;
     padding-left: 3.5%;
+  }
+
+  @media screen and (max-width: 790px) {
+    flex: 1;
   }
 `;
 
