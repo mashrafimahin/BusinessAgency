@@ -9,7 +9,8 @@ export const Wrapper = styled.button`
   font-family: brand, sans-serif;
   font-weight: 600;
   color: var(--defaultColor);
-  background-color: var(--btnBG);
+  background-color: ${(props) =>
+    props.special ? "var(--primaryColor)" : "var(--btnBG)"};
   padding: ${(props) => (props.$resize ? "2.6px 3.8px" : "5.5px")};
   border-radius: 50px;
   position: relative;
@@ -71,7 +72,8 @@ export const Wrapper = styled.button`
   .btn_text {
     display: inline-flex;
     overflow: hidden;
-    color: var(--defaultColor);
+    color: ${(props) =>
+      props.special ? "var(--textColor)" : "var(--defaultColor)"};
     text-shadow: 0 23px 0 currentColor;
     white-space: nowrap;
 

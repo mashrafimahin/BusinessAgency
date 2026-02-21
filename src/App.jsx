@@ -4,6 +4,7 @@ import GlobalStyles from "./Styles/Global.Styles";
 // pages
 import Hero from "./pages/Hero";
 import Features from "./pages/Features";
+import Service from "./pages/Service";
 // components
 import TopBar from "./components/TopBar";
 import Navbar from "./components/Navbar";
@@ -15,8 +16,10 @@ function App() {
       <GlobalStyles />
       {/* <TopBar /> */}
       {/* <Navbar /> */}
-      <Hero />
-      <Features />
+      {/* <Hero /> */}
+      {/* <Features /> */}
+      <Service />
+      <div style={{ minHeight: "100vh" }}></div>
     </>
   );
 }

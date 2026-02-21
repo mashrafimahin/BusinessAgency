@@ -34,10 +34,11 @@ export const SubHeading = styled.h2`
 export const Highlight = styled.span`
   position: relative;
   font-family: brand, sans-serif;
+  font-size: 0.9rem;
   color: var(--accentColor);
-  font-family: 1.8rem;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
 
   &::selection {
     background: #000;
@@ -85,10 +86,39 @@ export const CommonPara = styled(Paragraph)`
   color: var(--extendPara);
   line-height: 24px;
   font-size: 1.05rem;
+
+  @media screen and (max-width: 990px) {
+    font-size: 1rem;
+    width: 80%;
+  }
 `;
 
 export const FlexBox = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: ${(props) => (props.col ? "column" : "row")};
+  align-items: ${(props) => (props.col ? "flex-start" : "center")};
   justify-content: ${(props) => (props.yes ? "center" : "flex-start")};
+`;
+
+export const UserIcon = styled.img`
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  object-fit: contain;
+  border: 4px solid white;
+  filter: ${(props) => (props.gray ? "grayscale(100%)" : "")};
+`;
+
+export const CustomIcon = styled.i`
+  height: 45px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  color: white;
+  background: var(--primaryColor);
+  border-radius: 50%;
+  border: 4px solid white;
+  font-weight: 800;
+  z-index: 1;
 `;
