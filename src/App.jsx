@@ -14,12 +14,11 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      {/* <TopBar /> */}
-      {/* <Navbar /> */}
-      {/* <Hero /> */}
-      {/* <Features /> */}
+      <TopBar />
+      <Navbar />
+      <Hero />
+      <Features />
       <Service />
-      <div style={{ minHeight: "100vh" }}></div>
     </>
   );
 }

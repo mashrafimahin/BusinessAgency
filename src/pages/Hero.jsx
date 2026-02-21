@@ -46,7 +46,8 @@ function Hero() {
             style={{ fontSize: "clamp(2.2rem, 4vw, 3.6rem)" }}
             special={true}
           >
-            Maximise growth qualified business <Highlight>consulting</Highlight>
+            Maximise growth qualified business{" "}
+            <Highlight $special={true}>consulting</Highlight>
           </Heading>
           <Paragraph>
             Transform your business with expert consultancy services our team of

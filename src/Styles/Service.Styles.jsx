@@ -22,6 +22,40 @@ export const Container = styled.section`
     border-radius: 0 0 30% 0;
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 35.5%;
+    height: 54px;
+    width: 120px;
+    background: var(--btnBG);
+    clip-path: polygon(
+      0 0,
+      6% 10%,
+      10% 20%,
+      12% 30%,
+      13% 41%,
+      13% 52%,
+      12% 64%,
+      10% 75%,
+      7% 85%,
+      4% 92%,
+      0 100%,
+      100% 100%,
+      96% 92%,
+      93% 85%,
+      90% 75%,
+      88% 64%,
+      87% 52%,
+      87% 41%,
+      88% 30%,
+      90% 20%,
+      94% 10%,
+      100% 0
+    );
+  }
+
   @media screen and (max-width: 1180px) {
     padding-right: 4%;
 
@@ -32,6 +66,9 @@ export const Container = styled.section`
   @media screen and (max-width: 990px) {
     justify-content: flex-start;
     padding-left: 12.5%;
+    &::after {
+      display: none;
+    }
   }
   @media screen and (max-width: 989px) {
     padding-left: 8%;
@@ -82,8 +119,10 @@ export const Shape = styled.img`
   left: 0;
   max-width: 40%;
   object-fit: cover;
-  filter: drop-shadow(10px 10px 0 white) drop-shadow(-10px 10px 0 white)
-    drop-shadow(10px -10px 0 white) drop-shadow(-10px -10px 0 white);
+  filter: drop-shadow(10px 10px 0 var(--btnBG))
+    drop-shadow(-10px 10px 0 var(--btnBG))
+    drop-shadow(10px -10px 0 var(--btnBG))
+    drop-shadow(-10px -10px 0 var(--btnBG));
 
   @media screen and (max-width: 990px) {
     display: none;
@@ -94,9 +133,10 @@ export const TopShape = styled(Shape)`
   top: 2%;
   left: 35%;
   max-width: 10%;
-  border: 10px solid #fff;
+  border: 12px solid var(--btnBG);
   border-radius: 50%;
   filter: none;
+  z-index: 1;
 `;
 
 export const SubChild = styled.div`

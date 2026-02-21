@@ -38,11 +38,11 @@ export const SubHeading = styled.h2`
 export const Highlight = styled.span`
   position: relative;
   font-family: brand, sans-serif;
-  font-size: 0.9rem;
+  font-size: ${(props) => (props.$special ? "inherit" : "0.9rem")};
   color: var(--accentColor);
   font-weight: 700;
   letter-spacing: 2.5px;
-  text-transform: uppercase;
+  text-transform: ${(props) => (props.$special ? "inherit" : "uppercase")};
 
   &::selection {
     background: #000;
