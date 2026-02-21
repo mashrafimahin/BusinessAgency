@@ -21,6 +21,10 @@ export const Heading = styled.h1`
     background: #000;
     color: #fff;
   }
+
+  @media screen and (max-width: 767px) {
+    font-size: 2rem;
+  }
 `;
 
 export const SubHeading = styled.h2`
@@ -90,6 +94,10 @@ export const CommonPara = styled(Paragraph)`
   @media screen and (max-width: 990px) {
     font-size: 1rem;
     width: 80%;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
   }
 `;
 
