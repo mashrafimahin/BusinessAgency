@@ -63,6 +63,21 @@ export const Container = styled.section`
       width: 100%;
     }
   }
+  @media screen and (max-width: 1260px) {
+    &::after {
+      width: 110px;
+    }
+  }
+  @media screen and (max-width: 1190px) {
+    &::after {
+      width: 100px;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    &::after {
+      width: 90px;
+    }
+  }
   @media screen and (max-width: 990px) {
     justify-content: flex-start;
     padding-left: 12.5%;
