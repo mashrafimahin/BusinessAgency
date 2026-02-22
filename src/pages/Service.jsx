@@ -16,6 +16,7 @@ import {
   TopShape,
 } from "../Styles/Service.Styles";
 import {
+  Wrapper,
   Tagline,
   Heading,
   CommonPara,

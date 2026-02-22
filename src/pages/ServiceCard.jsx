@@ -1,4 +1,3 @@
-// hooks
 // styles
 import {
   Container,
@@ -7,6 +6,7 @@ import {
   Card,
 } from "../Styles/ServiceCard.Styles";
 import {
+  Wrapper,
   Heading,
   Tagline,
   FlexBox,
@@ -53,43 +53,45 @@ const info = [
 // main
 function ServiceCard() {
   return (
-    <Container>
-      {/* heading */}
-      <TextArea>
-        <FlexBox col={true}>
-          <DraftDiv>
-            <Tagline>Transformative solution</Tagline>
-          </DraftDiv>
-          <Heading black={true}>Get our exclusive service</Heading>
-        </FlexBox>
-        <RatingBox />
-      </TextArea>
-      {/* boxes */}
-      <CardWrapper>
-        {info.map((elm) => (
-          <Card key={elm.id}>
-            <div className="child">
-              <div className="infoChild">
-                <Paragraph>
-                  <span>{elm.id}</span>/3
-                </Paragraph>
-                <img src={elm.icon} />
-                <SubHeading $default={true} $cardSize={true}>
-                  {elm.title}
-                </SubHeading>
-                <CommonPara $cardSize={true}>{elm.des}</CommonPara>
-                <div className="res">
-                  <Button $wSize={true}>Get Started</Button>
+    <Wrapper>
+      <Container>
+        {/* heading */}
+        <TextArea>
+          <FlexBox col={true}>
+            <DraftDiv>
+              <Tagline>Transformative solution</Tagline>
+            </DraftDiv>
+            <Heading black={true}>Get our exclusive service</Heading>
+          </FlexBox>
+          <RatingBox />
+        </TextArea>
+        {/* boxes */}
+        <CardWrapper>
+          {info.map((elm) => (
+            <Card key={elm.id}>
+              <div className="child">
+                <div className="infoChild">
+                  <Paragraph>
+                    <span>{elm.id}</span>/3
+                  </Paragraph>
+                  <img src={elm.icon} />
+                  <SubHeading $default={true} $cardSize={true}>
+                    {elm.title}
+                  </SubHeading>
+                  <CommonPara $cardSize={true}>{elm.des}</CommonPara>
+                  <div className="res">
+                    <Button $wSize={true}>Get Started</Button>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="child">
-              <img src={elm.image} />
-            </div>
-          </Card>
-        ))}
-      </CardWrapper>
-    </Container>
+              <div className="child">
+                <img src={elm.image} />
+              </div>
+            </Card>
+          ))}
+        </CardWrapper>
+      </Container>
+    </Wrapper>
   );
 }
 

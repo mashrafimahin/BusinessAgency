@@ -18,6 +18,9 @@ export const Container = styled.section`
   @media screen and (max-width: 520px) {
     padding: 12% 2%;
   }
+  @media screen and (min-width: 1820px) {
+    padding: 12% 0;
+  }
 `;
 
 export const TextArea = styled.div`

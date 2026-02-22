@@ -56,6 +56,13 @@ export const Container = styled.section`
     );
   }
 
+  @media screen and (min-width: 1680px) {
+    padding: 8% 6% 10%;
+    padding-right: 20%;
+  }
+  @media screen and (min-width: 3356px) {
+    padding-right: 30%;
+  }
   @media screen and (max-width: 1180px) {
     padding-right: 4%;
 
@@ -111,6 +118,12 @@ export const Child = styled.div`
   width: 50%;
   z-index: 1;
 
+  @media screen and (min-width: 1680px) {
+    width: 40%;
+  }
+  @media screen and (min-width: 3356px) {
+    width: 30%;
+  }
   @media screen and (max-width: 1150px) {
     width: 55%;
   }

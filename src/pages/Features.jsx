@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // styles
 import { Container, Content, Box } from "../Styles/Features.Styles";
 import {
+  Wrapper,
   Heading,
   SubHeading,
   Tagline,
@@ -49,17 +50,19 @@ function Features() {
         Our mission is to empower businesses of thrive in solutions
       </CommonPara>
       {/* slides */}
-      <Content>
-        {info.map((elm, i) => (
-          <Box key={i}>
-            <i>
-              <FontAwesomeIcon icon={elm.ic} />
-            </i>
-            <SubHeading>{elm.title}</SubHeading>
-            <CommonPara>{elm.des}</CommonPara>
-          </Box>
-        ))}
-      </Content>
+      <Wrapper>
+        <Content>
+          {info.map((elm, i) => (
+            <Box key={i}>
+              <i>
+                <FontAwesomeIcon icon={elm.ic} />
+              </i>
+              <SubHeading>{elm.title}</SubHeading>
+              <CommonPara>{elm.des}</CommonPara>
+            </Box>
+          ))}
+        </Content>
+      </Wrapper>
     </Container>
   );
 }
