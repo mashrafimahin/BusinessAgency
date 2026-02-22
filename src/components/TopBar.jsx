@@ -84,6 +84,10 @@ const Container = styled.div`
     padding: 8px 3%;
   }
 
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
   i {
     font-size: 12px;
   }

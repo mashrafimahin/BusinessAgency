@@ -10,6 +10,9 @@ export const Container = styled.nav`
   @media screen and (min-width: 1700px) {
     padding: 0.6% 3%;
   }
+  @media screen and (max-width: 1280px) {
+    padding: 2% 2.2%;
+  }
 `;
 
 export const Logo = styled.img`
@@ -19,6 +22,15 @@ export const Logo = styled.img`
   @media screen and (min-width: 1700px) {
     max-width: 6%;
   }
+  @media screen and (max-width: 990px) {
+    max-width: 20%;
+  }
+  @media screen and (max-width: 730px) {
+    max-width: 24%;
+  }
+  @media screen and (max-width: 560px) {
+    max-width: 32%;
+  }
 `;
 
 export const List = styled.ul`
@@ -27,6 +39,13 @@ export const List = styled.ul`
   justify-content: space-around;
   padding: 10px;
   gap: 2.1rem;
+
+  @media screen and (max-width: 1280px) {
+    gap: 1.2rem;
+  }
+  @media screen and (max-width: 990px) {
+    display: none;
+  }
 
   li {
     display: flex;
@@ -78,5 +97,25 @@ export const SearchButton = styled.button`
 
   &:hover {
     color: var(--accentColor);
+  }
+`;
+
+export const Humberger = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 20px;
+  cursor: pointer;
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: brand, sans-serif;
+    color: var(--textColor);
+  }
+
+  i {
+    color: var(--textColor);
+    font-size: 1.4rem;
   }
 `;
