@@ -31,7 +31,7 @@ export const Wrapper = styled.button`
       position: absolute;
       top: 0;
       left: 0;
-      width: 45px;
+      width: ${(props) => (props.$wSize ? "48px" : "45px")};
       height: 100%;
       background-color: var(--accentColor);
       border-radius: 50px;

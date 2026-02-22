@@ -22,15 +22,16 @@ export const Heading = styled.h1`
     color: #fff;
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 990px) {
     font-size: 2rem;
   }
 `;
 
 export const SubHeading = styled.h2`
-  color: var(--defaultColor);
+  color: ${(props) =>
+    props.$default ? "var(--textColor)" : "var(--defaultColor)"};
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: ${(props) => (props.$cardSize ? "2rem" : "1.3rem")};
   letter-spacing: 0.3px;
   font-family: Arial, Helvetica, sans-serif;
 `;
@@ -87,7 +88,8 @@ export const Paragraph = styled.p`
 `;
 
 export const CommonPara = styled(Paragraph)`
-  color: var(--extendPara);
+  color: ${(props) =>
+    props.$cardSize ? "var(--paraColor)" : "var(--extendPara)"};
   line-height: 24px;
   font-size: 1.05rem;
 
@@ -106,6 +108,7 @@ export const FlexBox = styled.div`
   flex-direction: ${(props) => (props.col ? "column" : "row")};
   align-items: ${(props) => (props.col ? "flex-start" : "center")};
   justify-content: ${(props) => (props.yes ? "center" : "flex-start")};
+  row-gap: 1rem;
 `;
 
 export const UserIcon = styled.img`

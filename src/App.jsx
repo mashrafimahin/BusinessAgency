@@ -5,6 +5,7 @@ import GlobalStyles from "./Styles/Global.Styles";
 import Hero from "./pages/Hero";
 import Features from "./pages/Features";
 import Service from "./pages/Service";
+import ServiceCard from "./pages/ServiceCard";
 // components
 import TopBar from "./components/TopBar";
 import Navbar from "./components/Navbar";
@@ -19,6 +20,7 @@ function App() {
       <Hero />
       <Features />
       <Service />
+      <ServiceCard />
     </>
   );
 }
