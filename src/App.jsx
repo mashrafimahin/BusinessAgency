@@ -17,13 +17,13 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      {/* <TopBar /> */}
-      {/* <Navbar /> */}
-      {/* <Hero /> */}
-      {/* <Features /> */}
-      {/* <Service /> */}
-      {/* <ServiceCard /> */}
-      {/* <Progress /> */}
+      <TopBar />
+      <Navbar />
+      <Hero />
+      <Features />
+      <Service />
+      <ServiceCard />
+      <Progress />
       <Bars />
     </>
   );
