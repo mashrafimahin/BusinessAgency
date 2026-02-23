@@ -6,6 +6,7 @@ import Hero from "./pages/Hero";
 import Features from "./pages/Features";
 import Service from "./pages/Service";
 import ServiceCard from "./pages/ServiceCard";
+import Progress from "./pages/Progress";
 // components
 import TopBar from "./components/TopBar";
 import Navbar from "./components/Navbar";
@@ -21,6 +22,7 @@ function App() {
       <Features />
       <Service />
       <ServiceCard />
+      <Progress />
     </>
   );
 }
