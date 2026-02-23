@@ -10,19 +10,21 @@ import Progress from "./pages/Progress";
 // components
 import TopBar from "./components/TopBar";
 import Navbar from "./components/Navbar";
+import Bars from "./pages/Bars";
 
 // main
 function App() {
   return (
     <>
       <GlobalStyles />
-      <TopBar />
-      <Navbar />
-      <Hero />
-      <Features />
-      <Service />
-      <ServiceCard />
-      <Progress />
+      {/* <TopBar /> */}
+      {/* <Navbar /> */}
+      {/* <Hero /> */}
+      {/* <Features /> */}
+      {/* <Service /> */}
+      {/* <ServiceCard /> */}
+      {/* <Progress /> */}
+      <Bars />
     </>
   );
 }
