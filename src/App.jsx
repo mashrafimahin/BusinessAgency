@@ -7,6 +7,7 @@ import Features from "./pages/Features";
 import Service from "./pages/Service";
 import ServiceCard from "./pages/ServiceCard";
 import Progress from "./pages/Progress";
+import Testimonial from "./pages/Testimonial";
 // components
 import TopBar from "./components/TopBar";
 import Navbar from "./components/Navbar";
@@ -25,6 +26,7 @@ function App() {
       <ServiceCard />
       <Progress />
       <Bars />
+      <Testimonial />
     </>
   );
 }
