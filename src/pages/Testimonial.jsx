@@ -17,6 +17,7 @@ import {
 import { DraftDiv } from "../Styles/Service.Styles";
 const headSize = { marginTop: "20px" };
 const hrSize = { margin: "24px 0" };
+const leftAlign = { alignItems: "flex-start" };
 // icons
 import {
   faArrowLeft,
@@ -27,8 +28,6 @@ import {
 import CharOne from "../assets/images/char-1.webp";
 import CharTwo from "../assets/images/char-2.webp";
 import CharThree from "../assets/images/char-3.webp";
-// component
-import RatingBox from "../components/RatingBox";
 // info
 const info = [
   {
@@ -91,9 +90,8 @@ function Testimonial() {
                 </CommonPara>
               </div>
               <div className="child">
-                <img src={elm.profile} />
+                <img src={elm.profile} alt={elm.name} />
                 <div className="intro">
-                  {/* <RatingBox /> */}
                   <SubHeading black={true}>{elm.name}</SubHeading>
                   <CommonPara>{elm.title}</CommonPara>
                 </div>

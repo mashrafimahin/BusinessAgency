@@ -12,6 +12,33 @@ export const Container = styled.div`
   @media screen and (min-width: 1820px) {
     padding: 12% 0;
   }
+  @media screen and (max-width: 1300px) {
+    padding: 12% 2%;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 10% 6%;
+    row-gap: 2.5rem;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 8% 4%;
+    row-gap: 2rem;
+  }
+  @media screen and (max-width: 576px) {
+    padding: 6% 3%;
+    row-gap: 1.5rem;
+  }
+  @media screen and (max-width: 425px) {
+    padding: 5% 2%;
+    row-gap: 1.2rem;
+  }
+  @media screen and (max-width: 375px) {
+    padding: 4% 2%;
+    row-gap: 1rem;
+  }
+  @media screen and (max-width: 320px) {
+    padding: 3% 2%;
+    row-gap: 0.8rem;
+  }
 `;
 
 export const Header = styled.div`
@@ -41,6 +68,13 @@ export const Header = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 768px) {
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
 `;
 
 export const SliderWrapper = styled.div`
@@ -49,6 +83,14 @@ export const SliderWrapper = styled.div`
   gap: 2rem;
   width: 100%;
   overflow: hidden;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  @media screen and (max-width: 425px) {
+    gap: 1rem;
+  }
 `;
 
 export const Slider = styled.div`
@@ -68,7 +110,6 @@ export const Slider = styled.div`
     height: 80px;
     width: 30px;
     background: var(--btnBG);
-    /* background: green; */
     clip-path: polygon(
       0 0,
       10% 6%,
@@ -108,6 +149,7 @@ export const Slider = styled.div`
       display: flex;
       flex-direction: column;
       row-gap: 0.3rem;
+      margin-top: 1.2rem;
     }
 
     img {
@@ -132,6 +174,112 @@ export const Slider = styled.div`
   @media screen and (min-width: 2650px) {
     &::before {
       top: 64%;
+    }
+  }
+  @media screen and (max-width: 1300px) {
+    padding: 3rem 3rem 2rem 1.5rem;
+    .child {
+      gap: 1rem;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    min-width: 100%;
+    padding: 2.5rem 3rem 2.5rem 1.5rem;
+    &::before {
+      top: 64%;
+    }
+    .child {
+      gap: 1.5rem;
+    }
+    i {
+      font-size: 3.5rem;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    min-width: 100%;
+    padding: 2rem 2.5rem 2rem 1.5rem;
+    &::before {
+      top: 62%;
+    }
+    .child {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      background: transparent;
+    }
+    i {
+      font-size: 3rem;
+    }
+    img {
+      height: 90px;
+      width: 90px;
+      margin-left: 0;
+      border: 8px solid var(--btnBG);
+    }
+  }
+  @media screen and (max-width: 576px) {
+    padding: 1.8rem 2rem 1.8rem 1.5rem;
+    &::before {
+      top: 64%;
+    }
+    .child {
+      gap: 0.8rem;
+    }
+    i {
+      font-size: 2.5rem;
+    }
+    img {
+      height: 80px;
+      width: 80px;
+      border: 6px solid var(--btnBG);
+    }
+  }
+  @media screen and (max-width: 485px) {
+    padding: 1.5rem 1.8rem 1.5rem 1.2rem;
+    &::before {
+      top: 66%;
+    }
+    .child {
+      gap: 0.6rem;
+    }
+    i {
+      font-size: 2.2rem;
+    }
+    img {
+      height: 70px;
+      width: 70px;
+      border: 5px solid var(--btnBG);
+    }
+  }
+  @media screen and (max-width: 375px) {
+    padding: 1.2rem 1.5rem 1.2rem 1rem;
+    &::before {
+      top: 69%;
+    }
+    .child {
+      gap: 0.5rem;
+    }
+    i {
+      font-size: 2rem;
+    }
+    img {
+      height: 60px;
+      width: 60px;
+      border: 4px solid var(--btnBG);
+    }
+  }
+  @media screen and (max-width: 320px) {
+    padding: 1rem 1.2rem 1rem 0.8rem;
+    .child {
+      gap: 0.4rem;
+    }
+    i {
+      font-size: 1.8rem;
+    }
+    img {
+      height: 50px;
+      width: 50px;
+      border: 3px solid var(--btnBG);
     }
   }
 `;

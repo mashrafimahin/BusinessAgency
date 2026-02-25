@@ -63,7 +63,13 @@ function ServiceCard() {
             </DraftDiv>
             <Heading black={true}>Get our exclusive service</Heading>
           </FlexBox>
-          <RatingBox />
+          <FlexBox col={true} style={{ alignItems: "flex-end" }}>
+            <RatingBox />
+            <CommonPara>
+              Customers review (<span style={{ fontWeight: 800 }}>4.8</span>
+              /5.0)
+            </CommonPara>
+          </FlexBox>
         </TextArea>
         {/* boxes */}
         <CardWrapper>
