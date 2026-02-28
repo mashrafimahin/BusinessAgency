@@ -3,7 +3,7 @@ import { styled, keyframes } from "styled-components";
 export const Container = styled.section`
   position: relative;
   background-color: var(--btnBG);
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
