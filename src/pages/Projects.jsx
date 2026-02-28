@@ -1,7 +1,7 @@
 // hook
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // context
-// import ScreenContext from "../context/ScreenSizeContext"
+import { ScreenContext } from "../context/ScreenSizeContext";
 // styles
 import {
   Container,
@@ -21,6 +21,7 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { useContext } from "react";
 // info
 const info = [
   {
@@ -50,6 +51,9 @@ const info = [
 ];
 // main
 function Projects() {
+  // context
+  const { size } = useContext(ScreenContext);
+
   return (
     <Container>
       <Tagline>Our projects</Tagline>
@@ -75,14 +79,16 @@ function Projects() {
         ))}
       </SlideWrapper>
       {/* will be visible at 767px */}
-      <Controller>
-        <i>
-          <FontAwesomeIcon icon={faChevronLeft} />
-        </i>
-        <i>
-          <FontAwesomeIcon icon={faChevronRight} />
-        </i>
-      </Controller>
+      {size < 767 && (
+        <Controller>
+          <i>
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </i>
+          <i>
+            <FontAwesomeIcon icon={faChevronRight} />
+          </i>
+        </Controller>
+      )}
     </Container>
   );
 }
