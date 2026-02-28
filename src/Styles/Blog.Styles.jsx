@@ -15,6 +15,16 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
   }
+  @media screen and (max-width: 767px) {
+    padding: 12% 4% 32%;
+
+    .flexible {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
 `;
 
 export const GridBox = styled.div`
@@ -50,6 +60,7 @@ export const GridBox = styled.div`
         align-items: center;
         gap: 14px;
         font-family: Arial, Helvetica, sans-serif;
+        flex-wrap: wrap;
 
         .tagDiv {
           padding: 6px 10px;
@@ -77,6 +88,7 @@ export const GridBox = styled.div`
           li {
             color: var(--paraColor);
             font-size: 15px;
+            white-space: nowrap;
           }
 
           li:nth-child(1) {
