@@ -8,6 +8,18 @@ export const Container = styled.div`
   row-gap: 2rem;
   position: relative;
 
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    background: inherit;
+    z-index: -1;
+    clip-path: ellipse(75% 100px at 50% 0);
+  }
+
   @media screen and (min-width: 1820px) {
     padding: 12% 0;
   }
@@ -20,7 +32,7 @@ export const Container = styled.div`
 
     .flexible {
       position: absolute;
-      bottom: 0;
+      bottom: 20px;
       left: 50%;
       transform: translate(-50%, -50%);
     }
