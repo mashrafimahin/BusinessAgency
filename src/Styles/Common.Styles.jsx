@@ -80,7 +80,7 @@ export const Tagline = styled(Highlight)`
 `;
 
 export const Paragraph = styled.p`
-  font-size: 1.1rem;
+  font-size: ${(props) => (props.$small ? "0.95rem" : "1.1rem")};
   color: var(--paraColor);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 28px;
