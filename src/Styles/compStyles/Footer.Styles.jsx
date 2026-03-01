@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const Container = styled.footer`
   background: var(--primaryColor);
   height: 100dvh;
-  padding: 0 6% 12%;
+  padding: 10% 6% 12%;
   position: relative;
+  z-index: -2;
 `;
 
 export const Slider = styled.div`
@@ -160,7 +161,7 @@ export const Content = styled.div`
 
 export const BottomBox = styled.div`
   position: absolute;
-  bottom: -100px;
+  bottom: -270px;
   left: 0;
   background: #1d293e;
   width: 100%;

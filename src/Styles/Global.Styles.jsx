@@ -7,6 +7,8 @@ const GlobalStyles = createGlobalStyle`
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scrollbar-color: var(--accentColor) var(--btnBG);
+            scrollbar-width: auto;
         }
 
         html {
@@ -35,6 +37,12 @@ const GlobalStyles = createGlobalStyle`
         body {
             background-color: var(--primaryColor);
             overflow-x: hidden;
+        }
+        ::-webkit-scrollbar-thumb {
+          background-color: var(--accentColor);
+        }
+        ::-webkit-scrollbar-track {
+          background-color: var(--btnBG);
         }
 `;
 

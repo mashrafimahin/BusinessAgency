@@ -14,6 +14,7 @@ import Blog from "./pages/Blog";
 import TopBar from "./components/TopBar";
 import Navbar from "./components/Navbar";
 import Bars from "./pages/Bars";
+import Footer from "./components/Footer";
 
 // main
 function App() {
@@ -31,6 +32,7 @@ function App() {
       <Testimonial />
       <Projects />
       <Blog />
+      <Footer />
     </>
   );
 }
