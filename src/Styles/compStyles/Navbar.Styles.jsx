@@ -1,4 +1,7 @@
-import styled from "styled-components";
+// hooks
+import { styled, keyframes } from "styled-components";
+// images
+import Image from "../../assets/images/woman.webp";
 
 export const Container = styled.nav`
   padding: 1.2% 4.2%;
@@ -30,6 +33,15 @@ export const Logo = styled.img`
   }
   @media screen and (max-width: 560px) {
     max-width: 32%;
+  }
+`;
+
+// animation
+const roll = keyframes`
+  0%,100% {
+    right: 10%
+  } 50% {
+    right: 20%;
   }
 `;
 
@@ -85,6 +97,11 @@ export const List = styled.ul`
       opacity: 0;
       z-index: -10;
       transition: all 0.3s ease-in-out;
+    }
+
+    .subChild.page {
+      left: -480px;
+      padding: 0;
     }
 
     .subChild.show {
@@ -144,14 +161,15 @@ export const List = styled.ul`
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       padding: 0 40px;
+      padding-right: 0;
 
       .child {
         /* background: green; */
-        padding: 20px;
+        padding: 30px 24px;
         padding-left: 30px;
         height: 100%;
-        width: 260px;
-        max-width: 260px;
+        width: 270px;
+        max-width: 300px;
         cursor: default;
         border-right: 1px solid var(--hoverColor);
 
@@ -233,13 +251,65 @@ export const List = styled.ul`
             }
           }
         }
+
+        .content {
+          height: 100%;
+          width: 100%;
+          background:
+            linear-gradient(#00000094 30%, #0077ff67 100%), url(${Image});
+          background-position: center center;
+          background-size: cover;
+          display: flex;
+          flex-direction: column;
+          row-gap: 1rem;
+          padding: 50px 20px 30px;
+
+          img {
+            height: 50px;
+            width: 50px;
+            max-width: 100%;
+            object-fit: cover;
+          }
+          h1 {
+            color: #fff;
+            font-size: 1.8rem;
+          }
+          p {
+            color: #eee;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 20px;
+            font-weight: 400;
+            font-size: 1rem;
+          }
+
+          .action {
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+
+            img {
+              position: absolute;
+              top: 20%;
+              right: 20%;
+              height: 100px;
+              width: 100px;
+              max-width: 100%;
+              animation: ${roll} 5s ease-in-out infinite;
+            }
+          }
+        }
       }
 
       .child:nth-child(1) {
         padding-left: 0;
       }
-      .child:nth-last-child(1) {
+      .child:nth-last-child(1),
+      .child:nth-last-child(2) {
         border-right: none;
+      }
+      .child:nth-last-child(1) {
+        min-width: 400px;
       }
     }
   }

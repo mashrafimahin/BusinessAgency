@@ -14,6 +14,8 @@ import {
 import { FlexBox } from "../Styles/Common.Styles";
 // icons
 import BrandIcon from "../assets/icons/primary-logo.png";
+import CTAlogo from "../assets/icons/cta-icon.png";
+import Arrow from "../assets/icons/carrow.png";
 import {
   faChevronDown,
   faMagnifyingGlass,
@@ -28,7 +30,7 @@ import { info } from "./HeaderInfo/MenuLinks";
 function Navbar() {
   // context
   const { size } = useContext(ScreenContext);
-  // control mega menu: track active menu item by id (null = none)
+  // control mega menu
   const [active, setActive] = useState(null);
 
   return (
@@ -89,6 +91,24 @@ function Navbar() {
                         </ul>
                       </div>
                     ))}
+                    {/* constat child */}
+                    <div className="child">
+                      <div className="content">
+                        <img src={CTAlogo} />
+                        <h1>
+                          Need help?
+                          <br /> Feel free contact us
+                        </h1>
+                        <p>
+                          Our mission is to empowers businesses off all size in
+                          an businesses.
+                        </p>
+                        <div className="action">
+                          <img src={Arrow} />
+                          <Button>Get in touch</Button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>

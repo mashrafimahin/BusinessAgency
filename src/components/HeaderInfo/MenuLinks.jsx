@@ -57,6 +57,7 @@ export const info = [
     id: 3,
     title: "Pages",
     dropDown: true,
+    childClass: "page",
     gridTemp: true,
     subMenu: [
       {
