@@ -1,5 +1,5 @@
 // hooks
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // context
 import { ScreenContext } from "../context/ScreenSizeContext";
@@ -21,39 +21,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 // components
 import Button from "./PrimaryButton";
-
 // links
-const links = [
-  {
-    title: "Home",
-    dropDown: false,
-  },
-  {
-    title: "Services",
-    dropDown: true,
-  },
-  {
-    title: "Pages",
-    dropDown: true,
-  },
-  {
-    title: "Portfolio",
-    dropDown: true,
-  },
-  {
-    title: "Blog",
-    dropDown: true,
-  },
-  {
-    title: "Contact",
-    dropDown: false,
-  },
-];
+import { info } from "./HeaderInfo/MenuLinks";
 
 // main
 function Navbar() {
   // context
   const { size } = useContext(ScreenContext);
+  // control mega menu: track active menu item by id (null = none)
+  const [active, setActive] = useState(null);
 
   return (
     <Container>
@@ -61,13 +37,61 @@ function Navbar() {
       <Logo src={BrandIcon} draggable={false} />
       {/* links */}
       <List>
-        {links.map((elm, i) => (
-          <li key={i}>
+        {info.map((elm) => (
+          <li
+            key={elm.id}
+            onMouseEnter={() => setActive(elm.id)}
+            onMouseLeave={() => setActive(null)}
+          >
             {elm.title}
-            {elm.dropDown && (
-              <i>
+            {elm?.dropDown && (
+              <i className="mainIcon">
                 <FontAwesomeIcon icon={faChevronDown} />
               </i>
+            )}
+            {/* subMenu */}
+            {elm?.subMenu && (
+              <div
+                className={`subChild ${elm?.childClass} ${active === elm.id ? "show" : ""}`}
+              >
+                {!elm?.gridTemp ? (
+                  <ul>
+                    {elm.subMenu.map((item, i) => (
+                      <li key={i}>
+                        <i className="logoIcon">
+                          <FontAwesomeIcon icon={item.iconClass} />
+                        </i>
+                        {item.title}
+                        <i className="linkIcon">
+                          <FontAwesomeIcon icon={item.status} />
+                        </i>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <div className="pageUl">
+                    {elm.subMenu.map((menus, i) => (
+                      <div key={i} className="child">
+                        <h2>{menus.title}</h2>
+                        <ul>
+                          {menus.list.map((item, i) => (
+                            <li key={i}>
+                              {item.title}
+                              {item.status ? (
+                                <span className={item.status.class}>
+                                  {item.status.text}
+                                </span>
+                              ) : (
+                                ""
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             )}
           </li>
         ))}
