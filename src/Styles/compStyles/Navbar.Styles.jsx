@@ -312,6 +312,61 @@ export const List = styled.ul`
         min-width: 400px;
       }
     }
+
+    .extend {
+      ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        width: 200px;
+        max-width: 200px;
+
+        li {
+          padding: 10px;
+          padding-left: 24px;
+          list-style: none;
+          font-size: 15px;
+          position: relative;
+          transition: all 0.2s ease-in-out;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 16px;
+            height: 2px;
+            width: 0;
+            background: var(--accentColor);
+            transition: all 0.2s ease-in-out;
+          }
+
+          &:hover {
+            padding-left: 40px;
+
+            &::before {
+              width: 16px;
+            }
+          }
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 2px;
+        width: 0;
+        background: var(--accentColor);
+        transition: all 1s ease-in-out;
+      }
+
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
   }
 `;
 

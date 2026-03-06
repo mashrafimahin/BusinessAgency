@@ -177,11 +177,20 @@ export const info = [
     id: 4,
     title: "Portfolio",
     dropDown: true,
+    childClass: "extend",
+    subMenu: [{ title: "Portfolio" }, { title: "Portfolio details" }],
   },
   {
     id: 5,
     title: "Blog",
     dropDown: true,
+    childClass: "extend",
+    subMenu: [
+      { title: "Blog standard" },
+      { title: "Blog grid" },
+      { title: "Blog with sidebar" },
+      { title: "Blog details" },
+    ],
   },
   {
     id: 6,

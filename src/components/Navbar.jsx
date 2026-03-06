@@ -1,5 +1,5 @@
 // hooks
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // context
 import { ScreenContext } from "../context/ScreenSizeContext";
@@ -60,13 +60,17 @@ function Navbar() {
                   <ul>
                     {elm.subMenu.map((item, i) => (
                       <li key={i}>
-                        <i className="logoIcon">
-                          <FontAwesomeIcon icon={item.iconClass} />
-                        </i>
+                        {item?.iconClass && (
+                          <i className="logoIcon">
+                            <FontAwesomeIcon icon={item.iconClass} />
+                          </i>
+                        )}
                         {item.title}
-                        <i className="linkIcon">
-                          <FontAwesomeIcon icon={item.status} />
-                        </i>
+                        {item?.status && (
+                          <i className="linkIcon">
+                            <FontAwesomeIcon icon={item.status} />
+                          </i>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -140,4 +144,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default React.memo(Navbar);
