@@ -16,7 +16,7 @@ export const Container = styled.div`
     height: 100px;
     width: 100%;
     background: inherit;
-    z-index: -1;
+    z-index: 1;
     clip-path: ellipse(75% 100px at 50% 0);
   }
 
@@ -32,9 +32,19 @@ export const Container = styled.div`
 
     .flexible {
       position: absolute;
-      bottom: 20px;
+      bottom: 50px;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+  }
+  @media screen and (max-width: 448px) {
+    .flexible {
+      bottom: 30px;
+    }
+
+    &::after {
+      height: 60px;
+      clip-path: ellipse(75% 60px at 50% 0);
     }
   }
 `;
