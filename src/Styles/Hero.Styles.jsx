@@ -9,19 +9,21 @@ export const Container = styled.div`
   margin-top: 3%;
   margin-left: 4%;
 
-  @media screen and (max-width: 990px) {
-    flex-direction: column;
-  }
-
-  @media screen and (max-width: 1200px) {
-    margin-left: 0;
-    justify-content: flex-start;
-  }
-
   @media screen and (min-width: 1480px) {
     margin-left: 0%;
     gap: 5rem;
     width: auto;
+  }
+  @media screen and (max-width: 1200px) {
+    margin-left: 0;
+  }
+  @media screen and (max-width: 1130px) {
+    margin-left: 3%;
+  }
+  @media screen and (max-width: 990px) {
+    flex-direction: column;
+    row-gap: 4rem;
+    margin-top: 10%;
   }
 `;
 
@@ -88,13 +90,34 @@ export const ImageWrapper = styled.div`
     );
   }
 
-  @media screen and (max-width: 1200px) {
-    scale: 0.9;
-  }
-
   @media screen and (min-width: 1480px) {
     scale: 1.35;
     margin-top: 20%;
+  }
+  @media screen and (max-width: 990px) {
+    padding-right: 2%;
+  }
+  @media screen and (max-width: 400px) {
+    &::before {
+      top: 42%;
+      left: 2%;
+      height: 105px;
+      width: 105px;
+    }
+    &::after {
+      top: 44%;
+    }
+  }
+  @media screen and (max-width: 325px) {
+    &::before {
+      top: 42%;
+      left: 2%;
+      height: 100px;
+      width: 100px;
+    }
+    &::after {
+      top: 44%;
+    }
   }
 `;
 
@@ -102,7 +125,7 @@ export const Image = styled.img`
   max-width: 420px;
 
   @media screen and (max-width: 990px) {
-    max-width: max-content;
+    max-width: 100%;
   }
 `;
 
@@ -117,6 +140,52 @@ export const PlayfulText = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 990px) {
+    top: 37.5%;
+    left: 1.4%;
+    scale: 0.95;
+  }
+  @media screen and (max-width: 586px) {
+    top: 38%;
+    left: 2%;
+  }
+  @media screen and (max-width: 586px) {
+    left: 2.7%;
+  }
+  @media screen and (max-width: 540px) {
+    top: 39%;
+    left: 3%;
+  }
+  @media screen and (max-width: 500px) {
+    top: 39.5%;
+    left: 4%;
+  }
+  @media screen and (max-width: 464px) {
+    top: 40%;
+    left: 4.5%;
+  }
+  @media screen and (max-width: 464px) {
+    top: 40%;
+    left: 5%;
+  }
+  @media screen and (max-width: 430px) {
+    top: 41%;
+    left: 6%;
+    scale: 1;
+  }
+  @media screen and (max-width: 400px) {
+    top: 42%;
+    left: 5%;
+  }
+  @media screen and (max-width: 376px) {
+    top: 43%;
+    left: 6%;
+  }
+  @media screen and (max-width: 350px) {
+    top: 44%;
+    left: 7%;
+  }
 `;
 
 const animate = keyframes`
@@ -145,6 +214,11 @@ export const PlayButton = styled.button`
   transition: scale 0.1s ease-out;
   &:active {
     scale: 0.9;
+  }
+  @media screen and (max-width: 400px) {
+    height: 45px;
+    width: 45px;
+    font-size: 1rem;
   }
 `;
 

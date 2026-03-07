@@ -38,6 +38,7 @@ const GlobalStyles = createGlobalStyle`
             /* background-color: var(--btnBG); */
             background-color: var(--primaryColor);
             overflow-x: hidden;
+            width: 100%;
         }
         ::-webkit-scrollbar-thumb {
           background-color: var(--accentColor);
