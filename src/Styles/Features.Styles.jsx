@@ -31,19 +31,19 @@ export const Content = styled.div`
   padding: 0 6%;
   margin-top: 20px;
 
+  @media screen and (min-width: 1720px) {
+    padding: 0%;
+  }
   @media screen and (max-width: 1230px) {
     padding: 0 4%;
   }
-
   @media screen and (max-width: 1074px) {
     padding: 0 2%;
   }
-
   @media screen and (max-width: 984px) {
     padding: 0 10%;
     grid-template-columns: repeat(2, 1fr);
   }
-
   @media screen and (max-width: 580px) {
     padding: 0 4%;
     grid-template-columns: 1fr;
