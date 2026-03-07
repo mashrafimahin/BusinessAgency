@@ -24,15 +24,15 @@ export const Container = styled.div`
     row-gap: 2rem;
   }
   @media screen and (max-width: 576px) {
-    padding: 6% 3%;
+    padding: 10% 3%;
     row-gap: 1.5rem;
   }
   @media screen and (max-width: 425px) {
-    padding: 5% 2%;
+    padding: 15% 2%;
     row-gap: 1.2rem;
   }
   @media screen and (max-width: 375px) {
-    padding: 4% 2%;
+    padding: 20% 2%;
     row-gap: 1rem;
   }
   @media screen and (max-width: 320px) {
@@ -199,12 +199,11 @@ export const Slider = styled.div`
   }
   @media screen and (max-width: 768px) {
     min-width: 100%;
-    padding: 2rem 2.5rem 1rem 1.5rem;
+    padding: 2rem 2.5rem 3rem 1.5rem;
     &::before {
       top: 62%;
     }
     .child {
-      flex-direction: column;
       align-items: flex-start;
       gap: 1rem;
       background: transparent;
@@ -219,8 +218,11 @@ export const Slider = styled.div`
       border: 8px solid var(--btnBG);
     }
   }
+  @media screen and (max-width: 686px) {
+    padding: 1.8rem 2rem 3.5rem 1.5rem;
+  }
   @media screen and (max-width: 576px) {
-    padding: 1.8rem 2rem 0.7rem 1.5rem;
+    padding: 1.8rem 2rem 3.8rem 1.5rem;
     &::before {
       top: 64%;
     }
@@ -237,7 +239,7 @@ export const Slider = styled.div`
     }
   }
   @media screen and (max-width: 485px) {
-    padding: 1.5rem 1.8rem 0ßrem 1.2rem;
+    padding: 1.5rem 1.8rem 4.5rem 1.2rem;
     &::before {
       top: 66%;
     }
@@ -254,7 +256,7 @@ export const Slider = styled.div`
     }
   }
   @media screen and (max-width: 375px) {
-    padding: 1.2rem 1.5rem 0rem 1rem;
+    padding: 1.2rem 1.5rem 5.5rem 1rem;
     &::before {
       top: 69%;
     }
@@ -270,8 +272,8 @@ export const Slider = styled.div`
       border: 4px solid var(--btnBG);
     }
   }
-  @media screen and (max-width: 320px) {
-    padding: 1rem 1.2rem 1rem 0.8rem;
+  @media screen and (max-width: 330px) {
+    padding: 1rem 1.2rem 6rem 0.8rem;
     .child {
       gap: 0.4rem;
     }

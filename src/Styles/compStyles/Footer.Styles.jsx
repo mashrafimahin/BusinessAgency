@@ -4,6 +4,13 @@ export const Container = styled.footer`
   background: var(--primaryColor);
   padding: 10% 6% 5%;
   position: relative;
+
+  @media screen and (max-width: 690px) {
+    padding-top: 15%;
+  }
+  @media screen and (max-width: 530px) {
+    padding-top: 20%;
+  }
 `;
 
 export const Slider = styled.div`
