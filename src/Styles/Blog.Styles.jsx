@@ -5,7 +5,6 @@ export const Container = styled.div`
   background: var(--btnBG);
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
   position: relative;
 
   &::after {
@@ -50,6 +49,7 @@ export const Container = styled.div`
 `;
 
 export const GridBox = styled.div`
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;

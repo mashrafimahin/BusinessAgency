@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, styled } from "styled-components";
 // font
 import brandFont from "../assets/fonts/brandText.ttf";
 
@@ -35,6 +35,7 @@ const GlobalStyles = createGlobalStyle`
         }
 
         body {
+            /* background-color: var(--btnBG); */
             background-color: var(--primaryColor);
             overflow-x: hidden;
         }
@@ -44,6 +45,15 @@ const GlobalStyles = createGlobalStyle`
         ::-webkit-scrollbar-track {
           background-color: var(--btnBG);
         }
+`;
+
+export const NavHandler = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: ${(props) => (props.$down ? "10" : "-10")};
+  margin-top: ${(props) => (props.$down ? "0" : "-100px")};
+  transition: 0.6s ease-in-out;
 `;
 
 export default GlobalStyles;

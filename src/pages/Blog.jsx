@@ -61,8 +61,8 @@ const info = [
 // main
 function Blog() {
   return (
-    <Wrapper>
-      <Container>
+    <Container>
+      <Wrapper>
         {/* heading part */}
         <Header>
           <div>
@@ -106,8 +106,8 @@ function Blog() {
             </div>
           ))}
         </GridBox>
-      </Container>
-    </Wrapper>
+      </Wrapper>
+    </Container>
   );
 }
 

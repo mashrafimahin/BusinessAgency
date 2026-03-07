@@ -21,8 +21,8 @@ const info = [
 // main
 function Bars() {
   return (
-    <Wrapper>
-      <Container>
+    <Container>
+      <Wrapper>
         <div className="content">
           {/* info */}
           <Heading>Skill and experience</Heading>
@@ -42,8 +42,8 @@ function Bars() {
             </div>
           ))}
         </div>
-      </Container>
-    </Wrapper>
+      </Wrapper>
+    </Container>
   );
 }
 
@@ -60,10 +60,6 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
-  @media screen and (min-width: 1820px) {
-    padding: 10% 0;
-  }
 
   .content {
     background: rgb(255, 255, 255, 0.2);

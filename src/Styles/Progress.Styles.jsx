@@ -17,6 +17,14 @@ export const Container = styled.div`
   }
 `;
 
+export const HeadWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1rem;
+`;
+
 export const TextWrapper = styled.div`
   width: 50%;
   text-align: center;
@@ -36,15 +44,8 @@ export const TextWrapper = styled.div`
 export const FlexBox = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: 94%;
-  padding: 0 3%;
+  width: 100%;
 
-  @media screen and (min-width: 1480px) {
-    padding: 0 10%;
-  }
-  @media screen and (min-width: 1720px) {
-    padding: 0;
-  }
   @media screen and (max-width: 1305px) {
     width: 100%;
     padding: 0 1%;

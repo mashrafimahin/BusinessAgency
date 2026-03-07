@@ -17,7 +17,6 @@ import {
 import { DraftDiv } from "../Styles/Service.Styles";
 const headSize = { marginTop: "20px" };
 const hrSize = { margin: "24px 0" };
-const leftAlign = { alignItems: "flex-start" };
 // icons
 import {
   faArrowLeft,
@@ -55,8 +54,8 @@ const info = [
 // main
 function Testimonial() {
   return (
-    <Wrapper>
-      <Container>
+    <Container>
+      <Wrapper>
         {/* header section */}
         <Header>
           <div className="child">
@@ -99,8 +98,8 @@ function Testimonial() {
             </Slider>
           ))}
         </SliderWrapper>
-      </Container>
-    </Wrapper>
+      </Wrapper>
+    </Container>
   );
 }
 

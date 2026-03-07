@@ -19,7 +19,6 @@ export const Container = styled.section`
     height: 100%;
     width: 95%;
     background-color: var(--hoverColor);
-    border-radius: 0 0 30% 0;
   }
 
   &::after {

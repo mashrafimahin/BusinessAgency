@@ -7,7 +7,6 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  row-gap: 3rem;
 
   @media screen and (min-width: 1820px) {
     padding: 12% 0;
@@ -83,6 +82,7 @@ export const SliderWrapper = styled.div`
   gap: 2rem;
   width: 100%;
   overflow: hidden;
+  margin-top: 3rem;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;

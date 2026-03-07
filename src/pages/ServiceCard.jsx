@@ -53,8 +53,8 @@ const info = [
 // main
 function ServiceCard() {
   return (
-    <Wrapper>
-      <Container>
+    <Container>
+      <Wrapper>
         {/* heading */}
         <TextArea>
           <FlexBox col={true}>
@@ -96,8 +96,8 @@ function ServiceCard() {
             </Card>
           ))}
         </CardWrapper>
-      </Container>
-    </Wrapper>
+      </Wrapper>
+    </Container>
   );
 }
 

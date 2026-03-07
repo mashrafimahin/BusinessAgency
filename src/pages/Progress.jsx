@@ -3,6 +3,7 @@
 import { Wrapper, Heading, Tagline, CommonPara } from "../Styles/Common.Styles";
 import {
   Container,
+  HeadWrapper,
   FlexBox,
   FlexChild,
   TextWrapper,
@@ -36,17 +37,17 @@ const info = [
 // main
 function Progress() {
   return (
-    <Wrapper>
-      <Container>
+    <Container>
+      <Wrapper>
         {/* heading */}
-        <DraftDiv>
+        <HeadWrapper>
           <Tagline>Fun facts</Tagline>
-        </DraftDiv>
-        <TextWrapper>
-          <Heading black={true}>
-            Exploring fun tidbits and fascinating facts
-          </Heading>
-        </TextWrapper>
+          <TextWrapper>
+            <Heading black={true}>
+              Exploring fun tidbits and fascinating facts
+            </Heading>
+          </TextWrapper>
+        </HeadWrapper>
         {/* flex container */}
         <FlexBox>
           {info.map((elm) => (
@@ -59,8 +60,8 @@ function Progress() {
             </FlexChild>
           ))}
         </FlexBox>
-      </Container>
-    </Wrapper>
+      </Wrapper>
+    </Container>
   );
 }
 
