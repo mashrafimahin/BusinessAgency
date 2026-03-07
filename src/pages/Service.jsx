@@ -51,7 +51,7 @@ function Service() {
         <DraftDiv>
           <Tagline>Our Company</Tagline>
         </DraftDiv>
-        <Heading black={true}>
+        <Heading $black={true}>
           Crafting success tailored solution for each & every challenges
         </Heading>
         <CommonPara>
@@ -76,15 +76,15 @@ function Service() {
               <li>Client Centric approach</li>
               <li>Commitment excellences</li>
             </List>
-            <Button special={true}>Read More</Button>
+            <Button $special={true}>Read More</Button>
           </Box>
           {/* clients */}
           <Box>
             <UserDiv>
               <FlexBox>
-                <UserIcon src={User1} gray={true} />
-                <UserIcon src={User2} gray={true} style={strech} />
-                <UserIcon src={User3} gray={true} style={strech} />
+                <UserIcon src={User1} $gray={true} />
+                <UserIcon src={User2} $gray={true} style={strech} />
+                <UserIcon src={User3} $gray={true} style={strech} />
                 <CustomIcon style={strech}>
                   <FontAwesomeIcon
                     icon={faPlus}
@@ -92,8 +92,8 @@ function Service() {
                   />
                 </CustomIcon>
               </FlexBox>
-              <FlexBox col={true}>
-                <Heading black={true}>3K+</Heading>
+              <FlexBox $col={true}>
+                <Heading $black={true}>3K+</Heading>
                 <CommonPara>Happy clients all over world now.</CommonPara>
               </FlexBox>
             </UserDiv>

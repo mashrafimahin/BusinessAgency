@@ -69,12 +69,12 @@ function Blog() {
             <DraftDiv>
               <Tagline>Latest news</Tagline>
             </DraftDiv>
-            <Heading black={true} style={topMarg}>
+            <Heading $black={true} style={topMarg}>
               Tip and tricks for success
             </Heading>
           </div>
           <div className="flexible">
-            <Button special={true}>Explore More</Button>
+            <Button $special={true}>Explore More</Button>
           </div>
         </Header>
         {/* grid boxes */}

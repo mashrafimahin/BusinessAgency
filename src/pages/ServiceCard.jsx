@@ -57,13 +57,13 @@ function ServiceCard() {
       <Wrapper>
         {/* heading */}
         <TextArea>
-          <FlexBox col={true}>
+          <FlexBox $col={true}>
             <DraftDiv>
               <Tagline>Transformative solution</Tagline>
             </DraftDiv>
-            <Heading black={true}>Get our exclusive service</Heading>
+            <Heading $black={true}>Get our exclusive service</Heading>
           </FlexBox>
-          <FlexBox col={true} style={{ alignItems: "flex-end" }}>
+          <FlexBox $col={true} style={{ alignItems: "flex-end" }}>
             <RatingBox />
             <CommonPara>
               Customers review (<span style={{ fontWeight: 800 }}>4.8</span>

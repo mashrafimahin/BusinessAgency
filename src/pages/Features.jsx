@@ -45,7 +45,7 @@ function Features() {
     <Container>
       {/* info */}
       <Tagline>Number #1 Solver</Tagline>
-      <Heading black={true}>Explore our core features</Heading>
+      <Heading $black={true}>Explore our core features</Heading>
       <CommonPara>
         Our mission is to empower businesses of thrive in solutions
       </CommonPara>

@@ -62,7 +62,7 @@ function Testimonial() {
             <DraftDiv>
               <Tagline>Testimonials</Tagline>
             </DraftDiv>
-            <Heading black={true} style={headSize}>
+            <Heading $black={true} style={headSize}>
               Listening to our clients
             </Heading>
           </div>
@@ -91,7 +91,7 @@ function Testimonial() {
               <div className="child">
                 <img src={elm.profile} alt={elm.name} />
                 <div className="intro">
-                  <SubHeading black={true}>{elm.name}</SubHeading>
+                  <SubHeading $black={true}>{elm.name}</SubHeading>
                   <CommonPara>{elm.title}</CommonPara>
                 </div>
               </div>

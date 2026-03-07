@@ -44,7 +44,7 @@ function Hero() {
         <ContentChild>
           <Heading
             style={{ fontSize: "clamp(2.2rem, 4vw, 3.6rem)" }}
-            special={true}
+            $special={true}
           >
             Maximise growth qualified business{" "}
             <Highlight $special={true}>consulting</Highlight>

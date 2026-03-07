@@ -43,7 +43,7 @@ function Progress() {
         <HeadWrapper>
           <Tagline>Fun facts</Tagline>
           <TextWrapper>
-            <Heading black={true}>
+            <Heading $black={true}>
               Exploring fun tidbits and fascinating facts
             </Heading>
           </TextWrapper>
@@ -52,7 +52,7 @@ function Progress() {
         <FlexBox>
           {info.map((elm) => (
             <FlexChild key={elm.id} $styleActive={elm?.styleAdv}>
-              <Heading black={true}>
+              <Heading $black={true}>
                 {elm.title}
                 {elm?.sup && <sup className="super">+</sup>}
               </Heading>

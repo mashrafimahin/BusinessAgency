@@ -35,8 +35,8 @@ function Bars() {
             <div className="bar" key={elm.id}>
               <div className="item">
                 <div className="text">{elm.title}</div>
-                <ProgressBar prog={elm.progress}>
-                  <ProgressLoad prog={elm.progress} />
+                <ProgressBar $prog={elm.progress}>
+                  <ProgressLoad $prog={elm.progress} />
                 </ProgressBar>
               </div>
             </div>
@@ -103,10 +103,10 @@ const ProgressBar = styled.div`
   position: relative;
 
   &::before {
-    content: "${(props) => (props.prog ? props.prog : "0")}";
+    content: "${(props) => (props.$prog ? props.$prog : "0")}";
     position: absolute;
     top: -44px;
-    left: calc(${(props) => (props.prog ? props.prog : "0")}% - 1%);
+    left: calc(${(props) => (props.$prog ? props.$prog : "0")}% - 1%);
     padding: 6px 10px 12px;
     color: var(--textColor);
     font-family: Arial, Helvetica, sans-serif;
@@ -128,7 +128,7 @@ const ProgressBar = styled.div`
     content: "";
     position: absolute;
     bottom: -3px;
-    left: ${(props) => (props.prog ? props.prog : "0")}%;
+    left: ${(props) => (props.$prog ? props.$prog : "0")}%;
     height: 10px;
     width: 10px;
     border-radius: 50%;
@@ -140,5 +140,5 @@ const ProgressBar = styled.div`
 const ProgressLoad = styled.div`
   background: var(--accentColor);
   height: 100%;
-  width: ${(props) => (props.prog ? props.prog : "0") + 1}%;
+  width: ${(props) => (props.$prog ? props.$prog : "0") + 1}%;
 `;

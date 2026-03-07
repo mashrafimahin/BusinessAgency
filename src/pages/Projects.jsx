@@ -57,7 +57,7 @@ function Projects() {
   return (
     <Container>
       <Tagline>Our projects</Tagline>
-      <Heading black={true}>Breakthrough projects</Heading>
+      <Heading $black={true}>Breakthrough projects</Heading>
       <SlideWrapper>
         {info.map((elm) => (
           <Child key={elm.id}>

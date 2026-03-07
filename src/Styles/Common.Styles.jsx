@@ -15,10 +15,10 @@ export const Wrapper = styled.section`
 export const Heading = styled.h1`
   font-family: brand, sans-serif;
   font-weight: 700;
-  letter-spacing: ${(props) => (props.special ? "2px" : "0")};
+  letter-spacing: ${(props) => (props.$special ? "2px" : "0")};
   color: ${(props) =>
-    props.black ? "var(--defaultColor)" : "var(--textColor)"};
-  font-size: ${(props) => (props.special ? "3.3rem" : "2.8rem")};
+    props.$black ? "var(--defaultColor)" : "var(--textColor)"};
+  font-size: ${(props) => (props.$special ? "3.3rem" : "2.8rem")};
   font-weight: 800;
 
   &::selection {
@@ -109,9 +109,9 @@ export const CommonPara = styled(Paragraph)`
 
 export const FlexBox = styled.div`
   display: flex;
-  flex-direction: ${(props) => (props.col ? "column" : "row")};
-  align-items: ${(props) => (props.col ? "flex-start" : "center")};
-  justify-content: ${(props) => (props.yes ? "center" : "flex-start")};
+  flex-direction: ${(props) => (props.$col ? "column" : "row")};
+  align-items: ${(props) => (props.$col ? "flex-start" : "center")};
+  justify-content: ${(props) => (props.$yes ? "center" : "flex-start")};
   row-gap: 1rem;
 `;
 
@@ -121,7 +121,7 @@ export const UserIcon = styled.img`
   border-radius: 50%;
   object-fit: contain;
   border: 4px solid white;
-  filter: ${(props) => (props.gray ? "grayscale(100%)" : "")};
+  filter: ${(props) => (props.$gray ? "grayscale(100%)" : "")};
 `;
 
 export const CustomIcon = styled.i`

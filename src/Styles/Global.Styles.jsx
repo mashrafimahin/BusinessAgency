@@ -51,7 +51,7 @@ export const NavHandler = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: ${(props) => (props.$down ? "10" : "-10")};
+  z-index: ${(props) => (props.$down ? "2" : "0")};
   margin-top: ${(props) => (props.$down ? "0" : "-100px")};
   transition: 0.6s ease-in-out;
 `;
