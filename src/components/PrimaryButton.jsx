@@ -5,7 +5,7 @@ import { Wrapper } from "../Styles/compStyles/PrimaryButton.Styles";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 // main
-function PrimaryButton({ children, ...rest }) {
+function PrimaryButton({ children, boxCase, ...rest }) {
   return (
     <Wrapper {...rest}>
       <span className="btn_inner">
@@ -21,7 +21,7 @@ function PrimaryButton({ children, ...rest }) {
         </span>
 
         <span className="btn_text">
-          <span>{children}</span>
+          <span style={boxCase}>{children}</span>
         </span>
       </span>
     </Wrapper>

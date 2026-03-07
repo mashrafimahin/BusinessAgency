@@ -1,3 +1,5 @@
+// hooks
+import { useContext } from "react";
 // styles
 import {
   Container,
@@ -26,6 +28,8 @@ import ImageThree from "../assets/images/h1-service-3.webp";
 // components
 import RatingBox from "../components/RatingBox";
 import Button from "../components/PrimaryButton";
+// context
+import { ScreenContext } from "../context/ScreenSizeContext";
 // info
 const info = [
   {
@@ -52,6 +56,9 @@ const info = [
 ];
 // main
 function ServiceCard() {
+  // context
+  const { size } = useContext(ScreenContext);
+
   return (
     <Container>
       <Wrapper>
@@ -63,9 +70,14 @@ function ServiceCard() {
             </DraftDiv>
             <Heading $black={true}>Get our exclusive service</Heading>
           </FlexBox>
-          <FlexBox $col={true} style={{ alignItems: "flex-end" }}>
+          <FlexBox
+            $col={true}
+            style={
+              size > 768 ? { alignItems: "flex-end" } : { marginBottom: "20px" }
+            }
+          >
             <RatingBox />
-            <CommonPara>
+            <CommonPara style={{ textAlign: "right" }}>
               Customers review (<span style={{ fontWeight: 800 }}>4.8</span>
               /5.0)
             </CommonPara>
@@ -86,7 +98,12 @@ function ServiceCard() {
                   </SubHeading>
                   <CommonPara $cardSize={true}>{elm.des}</CommonPara>
                   <div className="res">
-                    <Button $wSize={true}>Get Started</Button>
+                    <Button
+                      $wSize={true}
+                      boxCase={{ color: "#252525", fontSize: "1.05rem" }}
+                    >
+                      Get Started
+                    </Button>
                   </div>
                 </div>
               </div>
