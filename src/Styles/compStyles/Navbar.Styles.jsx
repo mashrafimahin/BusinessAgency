@@ -6,9 +6,11 @@ import Image from "../../assets/images/woman.webp";
 export const Container = styled.nav`
   padding: 1.2% 4.2%;
   border-bottom: 1px solid #ffffff26;
+  background: var(--primaryColor);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 99;
 
   @media screen and (min-width: 1700px) {
     padding: 0.6% 3%;
@@ -364,6 +366,48 @@ export const List = styled.ul`
       &:hover {
         &::before {
           width: 100%;
+        }
+      }
+    }
+
+    /* media */
+    @media screen and (max-width: 1280px) {
+      .subChild.page {
+        left: -450px;
+      }
+      .pageUl {
+        .child {
+          max-width: 250px;
+        }
+      }
+    }
+    @media screen and (max-width: 1220px) {
+      .subChild.page {
+        left: -400px;
+      }
+      .pageUl {
+        .child {
+          max-width: 220px;
+        }
+      }
+    }
+    @media screen and (max-width: 1130px) {
+      .subChild.page {
+        left: -370px;
+      }
+      .pageUl {
+        .child {
+          max-width: 200px;
+        }
+      }
+    }
+    @media screen and (max-width: 1060px) {
+      .subChild.page {
+        left: -340px;
+      }
+      .pageUl {
+        .child:nth-last-child(1) {
+          min-width: 360px;
         }
       }
     }
