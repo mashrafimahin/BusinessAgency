@@ -22,6 +22,7 @@ import {
   faQrcode,
 } from "@fortawesome/free-solid-svg-icons";
 // components
+import MobileNav from "./MobileNav";
 import Button from "./PrimaryButton";
 // links
 import { info } from "./HeaderInfo/MenuLinks";
@@ -32,6 +33,12 @@ function Navbar() {
   const { size } = useContext(ScreenContext);
   // control mega menu
   const [active, setActive] = useState(null);
+  // control mobile menu
+  const [mobile, setMobile] = useState(false);
+  // handle menu bar
+  const handleMenu = () => {
+    setMobile(true);
+  };
 
   return (
     <Container>
@@ -132,7 +139,7 @@ function Navbar() {
         )}
         {size > 767 && <Button $resize={true}>Get a quote</Button>}
         {size < 990 && (
-          <Humberger>
+          <Humberger onClick={handleMenu}>
             <h3>Menu</h3>
             <i>
               <FontAwesomeIcon icon={faQrcode} />
@@ -140,6 +147,8 @@ function Navbar() {
           </Humberger>
         )}
       </FlexBox>
+      {/* mobile nav */}
+      {size < 990 && <MobileNav value={mobile} control={setMobile} />}
     </Container>
   );
 }
