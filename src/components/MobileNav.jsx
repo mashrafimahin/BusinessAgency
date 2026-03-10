@@ -2,8 +2,12 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // style
-import { Container, Child } from "../Styles/compStyles/MobileNav.Styles";
-import { List } from "../Styles/compStyles/Navbar.Styles";
+import {
+  Container,
+  Child,
+  CustomList,
+  Contact,
+} from "../Styles/compStyles/MobileNav.Styles";
 // context
 // icons
 import Brand from "../assets/icons/primary-logo.png";
@@ -13,29 +17,82 @@ import { faChevronDown, faTimes } from "@fortawesome/free-solid-svg-icons";
 // components
 import { InputBox } from "./InputBox";
 import Button from "./PrimaryButton";
+// icon
+import {
+  faFacebookF,
+  faInstagram,
+  faLinkedinIn,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 // info
 import { info } from "./HeaderInfo/MenuLinks";
+const linkInfo = [
+  {
+    tag: "Email",
+    title: "support@mail.com",
+    link: "#",
+  },
+  {
+    tag: "Phone",
+    title: "0123 456 789",
+    link: "#",
+  },
+  {
+    tag: "Location",
+    title: "Santa, United States",
+    link: "#",
+  },
+];
+const sciLink = [
+  {
+    link: "#",
+    icon: faFacebookF,
+  },
+  {
+    link: "#",
+    icon: faInstagram,
+  },
+  {
+    link: "#",
+    icon: faLinkedinIn,
+  },
+  {
+    link: "#",
+    icon: faTwitter,
+  },
+];
 // main
-function MobileNav() {
+function MobileNav({ value, control }) {
   // state
   const [open, setOpen] = useState(null);
-  // controller
+  // controller: toggle the submenu for the clicked item only
   const handleOpen = (elm) => {
-    if (!open && elm.dropDown) {
-      setOpen(elm.id);
-    } else {
+    if (!elm?.dropDown) {
+      // nothing to open for items without a dropdown
       setOpen(null);
+      return;
     }
+
+    // toggle: if the same id is already open, close it; otherwise open this one
+    if (open === elm.id) {
+      setOpen(null);
+    } else {
+      setOpen(elm.id);
+    }
+  };
+  // handle menu bar
+  const handleMenu = () => {
+    control(false);
   };
 
   // comp
   return (
-    <Container>
+    <Container $open={value}>
       <Child>
         {/* head */}
         <div className="head">
           <img src={Brand} />
-          <i>
+          <i onClick={handleMenu}>
             <FontAwesomeIcon icon={faTimes} />
           </i>
         </div>
@@ -44,13 +101,13 @@ function MobileNav() {
           <InputBox />
         </div>
         {/* menu */}
-        <List>
+        <CustomList>
           {info.map((elm) => (
             <li key={elm.id}>
               <div className="option" onClick={() => handleOpen(elm)}>
                 {elm.title}
                 {elm?.dropDown && (
-                  <i className="mainIcon">
+                  <i className={`mainIcon ${open === elm.id ? "roll" : ""}`}>
                     <FontAwesomeIcon icon={faChevronDown} />
                   </i>
                 )}
@@ -58,7 +115,7 @@ function MobileNav() {
               {/* subMenu */}
               {elm?.subMenu && (
                 <div
-                  className={`subChild ${elm?.childClass} ${open ? "open" : ""} `}
+                  className={`subChild ${elm?.childClass} ${open === elm.id ? "open" : ""} `}
                 >
                   {!elm?.gridTemp ? (
                     <ul>
@@ -123,7 +180,35 @@ function MobileNav() {
               )}
             </li>
           ))}
-        </List>
+        </CustomList>
+        {/* contacts */}
+        <Contact>
+          {/* single link */}
+          <div className="info">
+            <h2>Contact info</h2>
+            <div className="list">
+              {linkInfo.map((elm, index) => (
+                <div key={index}>
+                  <span>{elm.tag}</span>
+                  <a href={elm?.link | "#"}>{elm.title}</a>
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* social link */}
+          <div className="info">
+            <h2>Follow us</h2>
+            <div className="sci">
+              {sciLink.map((elm, i) => (
+                <a href={elm?.link | "#"} key={i}>
+                  <i>
+                    <FontAwesomeIcon icon={elm.icon} />
+                  </i>
+                </a>
+              ))}
+            </div>
+          </div>
+        </Contact>
       </Child>
     </Container>
   );
