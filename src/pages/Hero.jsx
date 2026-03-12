@@ -1,4 +1,5 @@
 // hooks
+import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // styles
 import {
@@ -34,26 +35,46 @@ import Overle from "../assets/images/hero-2.png";
 import Gemini from "../assets/images/hero-3.png";
 // icons
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
+// animation
+import HeroAnim from "../anim/HeroAnim";
+// text info
+const headText = "Maximise growth qualified business".split("");
+const headLastText = "consulting".split("");
 
 // main
 function Hero() {
+  // ref
+  const target = useRef();
+  // anim
+  HeroAnim(target);
+  // main
   return (
     <Wrapper>
       <Container>
         {/* info */}
-        <ContentChild>
+        <ContentChild ref={target}>
           <Heading
-            style={{ fontSize: "clamp(2.2rem, 4vw, 3.6rem)" }}
+            style={{ fontSize: "clamp(2.2rem, 4vw, 3.6rem)", width: "80%" }}
             $special={true}
           >
-            Maximise growth qualified business{" "}
-            <Highlight $special={true}>consulting</Highlight>
+            {headText.map((letter, index) => (
+              <div className="letter" key={index}>
+                {letter === " " ? "\u00A0" : letter}
+              </div>
+            ))}
+            <Highlight $special={true}>
+              {headLastText.map((lett, i) => (
+                <div className="letter letterTwo" key={i}>
+                  {lett}
+                </div>
+              ))}
+            </Highlight>
           </Heading>
-          <Paragraph>
+          <Paragraph className={"para"}>
             Transform your business with expert consultancy services our team of
             seasoned consultants unparalleled.
           </Paragraph>
-          <FlexBox style={topDown}>
+          <FlexBox style={topDown} className={"btn"}>
             <Button>Free Consultation</Button>
           </FlexBox>
         </ContentChild>

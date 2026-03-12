@@ -35,6 +35,10 @@ export const Child = styled.div`
 
 export const ContentChild = styled(Child)`
   max-width: 645px;
+
+  .letter {
+    display: inline-block;
+  }
 `;
 
 export const ImageWrapper = styled.div`
